@@ -1,0 +1,458 @@
+/*
+    font-family: 'Quicksand', sans-serif; 
+    font-family: 'Anton', sans-serif;
+    font-family: 'Satisfy', cursive;
+ */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Anton', sans-serif;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+html{
+    height: 100%;
+}
+body{
+    font-size: 1.5em;
+    min-height: 100%;
+}
+.contenedorgrid > * {
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+img {
+	width: 30%;
+	height: 30%;
+	object-fit: cover;
+}
+.barra .img-perfil {
+	width: 10%;
+	height: 10%;
+}
+
+.cabecera{
+    padding: 10%;
+    grid-area: header;
+    background-color:rgb(253, 253, 253);
+    text-align: center;
+    width: 100%;
+    font-family: 'Satisfy', cursive;
+}
+/*.encabezado{
+    display:flex;
+    align-items: center; 
+    justify-content: center;
+}/**/
+.text-logo p{
+    font-family: 'Satisfy', cursive;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/**/
+.encabezado{
+   
+    display:flex;
+    align-items:center; 
+    justify-content: center;
+}
+.encabezado img{
+    width: 30%;
+}
+.encabezado .perlita
+
+{
+    width: 8%;
+}
+
+/**/
+.navegacion{
+    grid-area: navbar;
+    background: url("images/img-nav-mb2.jpg")no-repeat;
+    background-size: cover;
+  /*  background-color:rgb(199, 250, 199);*/
+  
+}
+
+.titulo-llamativo{
+    background: url("images/img-nav-mb2.jpg")no-repeat;
+    background-size: cover;
+  /*  background-color:rgb(199, 250, 199);*/
+  
+}
+.navegacion .menu {
+
+	display: flex;
+	justify-content: space-between;
+}
+
+.navegacion a {
+    border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+	padding: 50px;
+	color: rgb(250, 248, 248);
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 200;
+	width: 100%;
+	text-align: center;
+	transition: 0.2s ease all;
+	font-size: 16px;
+}
+
+.navegacion a:hover {
+	background: #000;
+	color: #fff;
+}
+
+.barra{
+    grid-area: sidebar;
+    background-color:rgb(15, 15, 15);
+justify-content: center;}
+
+.barra .acerca-de img {
+	border-radius: 100%;
+	height: 10em; 
+	width: 10em; 
+	margin-bottom: 25px; 
+}
+.contenido{
+    grid-area: main;
+    background-color:white;
+   display: grid;
+
+  
+}
+.varios{
+    display: flex;
+
+}
+
+
+.contenido .texto-articulo {
+	padding: 20px;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content:space-around;
+	width: 100%;
+   
+}
+
+.contenido .image-miniatura {
+	width: 100%;
+}
+
+.contenido .titulo {
+	margin-bottom: 10px;
+	font-size: 25px;
+}
+
+.contenido .titulo a {
+	font-weight: 400;
+	color: #000;
+    text-decoration: none;
+}
+
+.contenido .resena {
+	font-size: 20px; 
+	line-height: 25px; 
+	font-weight: 300;
+	margin-bottom: 20px; 
+	color: #2f3131;
+    font-family: 'Quicksand', sans-serif; 
+}
+.pie{
+    grid-area: footer;
+    background-color:rgb(223, 223, 212);
+}
+.pie p{
+    padding-top: 20px;
+     font-family: 'Quicksand', sans-serif; 
+}
+.contenedorgrid{
+    
+    display: grid;
+    gap: 5px;
+    
+    grid-template: 
+    "header" 15%
+    "navbar" 10%
+    "main" 60%
+    "sidebar" 15%
+    "footer"15% ;
+}
+
+@media (max-width:599px){
+    .bio
+    {  display: none;
+    }
+    .barra.acerca-de {
+    align-items: center;
+}
+.varios{
+    display: flex;
+
+}
+
+
+.contenido .texto-articulo {
+	padding: 20px;
+	width: 25%;
+	display: flex;
+	flex-direction: column;
+	justify-content:space-around;
+	
+   
+}
+
+.contenido .image-miniatura {
+	width: 100%;
+}
+
+.contenido .titulo {
+	margin-bottom: 10px;
+	font-size: 25px;
+}
+
+.contenido .titulo a {
+	font-weight: 400;
+	color: #000;
+    text-decoration: none;
+}
+
+.contenido .resena {
+	font-size: 16px; 
+	line-height: 25px; 
+	font-weight: 300;
+	margin-bottom: 20px; 
+	color: #2f3131;
+    font-family: 'Quicksand', sans-serif; 
+}
+}
+@media (min-width:600px){
+    .contenedorgrid{
+        background-color: rgb(204, 204, 204);
+        grid-template: 
+        "header header header" 15%
+        "navbar navbar navbar"15%
+        "main main sidebar" 55%
+        "footer footer footer"15% / 2fr 2fr 2fr
+        ;
+    }   
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .text-logo p{
+        font-size: 20px;
+        font-weight: bold;
+        
+     }
+    .encabezado{
+        display:flex;
+        align-items:flex-start; 
+        flex-wrap: nowrap;
+    }
+    .encabezado img{
+        width: 20%;
+    }
+    
+    .barra{
+        grid-area: sidebar;
+        background-color:rgb(146, 210, 250);
+    }
+    .barra {
+        padding: 5em 25px; 
+        text-align: center;
+        min-height: 100px; 
+        background: rgb(0, 0, 0);
+        color: #868b8d;
+        box-shadow: 0px 0px 70px rgba(102, 102, 102, 0.2);
+    }
+    
+    .barra .acerca-de img {
+        border-radius: 100%;
+        height: 10em; 
+        width: 10em; 
+        margin-bottom: 25px; 
+    }
+    
+    .barra .bio {
+        margin-bottom: 25px; 
+        font-size: 30px; 
+        line-height: 25px; 
+        
+    }
+    .bio .text-perfil {
+        font-size: 15px;
+    font-family: 'Satisfy', cursive;
+    }
+    
+
+    
+}
+
+
+
+@media (min-width:900px){
+        .contenedorgrid{
+            background-color: rgb(250, 250, 250);
+            grid-template: 
+            "header header header" 15%
+            "navbar navbar navbar"15%
+            "main main sidebar"70%
+            "footer footer footer"15% / 2fr 2fr 2fr
+            ;
+
+        }
+.cabecera{
+padding: 0%;}
+img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+      /*  .encabezado{
+            display:flex;
+            align-items:flex-start; 
+            flex-wrap: nowrap;
+        }
+        */
+        .encabezado{
+        display:flex;
+    align-items:center; 
+    justify-content: center;
+
+}
+        .encabezado img{
+            width: 15%;
+        }
+        .text-logo p{
+           font-size: 20px;
+           font-weight: bold;
+           
+        }
+        .contenido{
+            grid-area: main;
+           /* background: url("images/img-nav-tbl2.jpg")no-repeat;*/
+            background-size: cover;
+            background-color: white;
+          
+        }
+        
+
+.barra{
+    grid-area: sidebar;
+    background-color:rgb(146, 210, 250);
+}
+.barra {
+	padding: 5em 25px; 
+	text-align: center;
+	min-height: 100px; 
+	background: rgb(0, 0, 0);
+	color: #868b8d;
+	box-shadow: 0px 0px 70px rgba(102, 102, 102, 0.2);
+}
+
+.barra .acerca-de img {
+	border-radius: 100%;
+	height: 20em; 
+	width: 20em; 
+	margin-bottom: 25px; 
+}
+
+.barra .bio {
+	margin-bottom: 25px; 
+	font-size: 30px; 
+	line-height: 25px; 
+    
+}
+.bio .text-perfil {
+    font-size: 25px;
+font-family: 'Satisfy', cursive;
+}
+    
+
+}
+
+.navegacion .text-coct 
+{
+    font-size: 25px;
+    font-family: 'Quicksand', sans-serif; 
+font-weight: bolder;
+text-align: center;
+
+}
+.receta p, li
+{
+    font-family: 'Quicksand', sans-serif; 
+}
+main .receta-emp{
+    background-color: rgb(250, 250, 250);
+    background: url("images/empanadas.png")no-repeat;
+    background-size: cover;
+}
+.receta p 
+{font-weight: bolder;
+}
+
+.receta-emp p 
+{
+    font-family: 'Quicksand', sans-serif;  
+    font-weight: bolder
+}
+
+main .receta-coct{
+    background-color: rgb(250, 250, 250);
+    background: url("images/coctelito.png")no-repeat;
+    background-size: cover;
+}
+
+.receta-coct p 
+{
+    font-family: 'Quicksand', sans-serif;  
+    font-weight: bolder
+}
+
+main .text-perfil
+{
+    background: url("images/jg3.png")no-repeat;
+    background-size: cover;
+     color: white;
+    font-weight: bolder;
+    padding: 20px 100px;
+    text-align: justify;
+}
+main .text-perfil p
+{
+    font-family: 'Quicksand', sans-serif; 
+}
+main .text-nocturna
+{
+    background: url("images/nocturna.png")no-repeat;
+    background-size: cover;
+     color: white;
+    font-weight: bolder;
+    padding: 20px 100px;
+    text-align: justify;
+}
+main .text-nocturna p
+{
+    font-family: 'Quicksand', sans-serif; 
+}
+
+main form
+{
+   padding: 20px; 
+   background: white;
+   color:rgb(80, 78, 78);
+   border-radius: 10px;
+   font-family: 'Quicksand', sans-serif;
+}
